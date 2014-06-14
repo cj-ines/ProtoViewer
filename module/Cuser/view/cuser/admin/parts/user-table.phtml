@@ -1,0 +1,33 @@
+<div class="panel">	
+	<div class="btn-group">
+		<a class="btn btn-default"><?php echo $this->translate('Create')?></a>
+		<a class="btn btn-default"><?php echo $this->translate('Search')?></a>
+	</div>
+</div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<?php echo $this->translate('User List'); ?>
+	</div>
+	<table class="table">
+		<?php
+		foreach ($users as $user) {
+		?>
+			<tr>
+				<td><?php echo $this->EscapeHtml($user->username)?></td>
+				<td><?php echo $this->EscapeHtml($user->email)?></td>
+			</tr>
+		<?php
+		} //end foreach
+		?>
+	</table>
+</div><!--  End panel -->
+<div class="panel">
+<?php
+	echo $this->paginationControl(
+		$users,
+		'sliding',
+		array('cuser/admin/parts/paginator','user'),
+		array('route' => 'cuser')
+	);
+?>
+</div>

@@ -1,0 +1,9 @@
+<?php
+
+$form = $this->form;
+
+$form->setAttribute('action','');
+echo $this->form()->openTag($form);
+echo $this->formRow($form->get('fullName'));
+echo $this->formRow($form->get('submit'));
+echo $this->form()->closeTag();

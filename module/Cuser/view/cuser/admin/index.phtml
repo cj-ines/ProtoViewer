@@ -1,0 +1,12 @@
+<div class="page-header">
+	<h3><?php echo $this->translate('Administration')?></h3>
+</div>
+<div class="row">
+	<div class="col-md-3">
+		<?php echo $this->partial('cuser/admin/parts/admin-panel')?>
+	</div>
+	<div class="col-md-9">
+		<?php //echo $this->partial('cuser/admin/parts/user-table', array('users' => $users))?>
+		<?php echo $this->usertable;?>
+	</div>
+</div>

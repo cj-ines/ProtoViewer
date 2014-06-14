@@ -1,0 +1,30 @@
+LOGIN
+<center>
+<div class="well" style="max-width: 300px; ">
+	<?php
+	$form = $this->form;
+	
+	$form->prepare();
+	$form->setAttribute('action','login');
+	
+	echo $this->form()->openTag($form);
+	
+	//echo $this->formcollection($form);
+	$element = $form->get('username');
+	//echo $this->formlabel($form);
+	echo $this->formelement($element);
+	echo $this->formelementerrors($element);
+	
+	$element = $form->get('password');
+	//echo $this->formlabel($form);
+	echo $this->formelement($element);
+	echo $this->formelementerrors($element);
+	
+	$element = $form->get('login');
+	echo $this->formelement($element);
+	
+	
+	echo $this->form()->closeTag();
+	?>
+</div>
+</center>

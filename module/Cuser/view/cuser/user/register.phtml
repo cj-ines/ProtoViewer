@@ -1,0 +1,9 @@
+<?php
+$form = $this->form;
+$form->setAttribute('method','POST');
+echo $this->form()->openTag($form);
+echo $this->formRow($form->get('username'));
+echo $this->formRow($form->get('email'));
+echo $this->formRow($form->get('password'));
+echo $this->formRow($form->get('submit'));
+echo $this->form()->closeTag();
